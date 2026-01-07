@@ -6,7 +6,6 @@ import { paddedSignal } from "./components/paddedSignal";
 import { filterSignal } from "./components/filterSignal";
 import { TotalFilterImpl } from "./components/shindoFilter";
 import { vectorTransform } from "./components/vectorTransform";
-import { findThreshold } from "./components/findThreshold";
 
 let SAMPLING_RATE = 100;
 
@@ -99,7 +98,6 @@ export function kyoshinCalculation(path: string) {
     const [__calcuateA, __calcuateATimeout] = log("⌛ Calculating A...");
 
     const a = Math.floor(0.3 / (1 / SAMPLING_RATE)) - 1;
-    const _a = findThreshold(syntheticGal, 0.3);
 
     const gal = syntheticGal[a] as number;
 
