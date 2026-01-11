@@ -7,3 +7,6 @@ datas/*.csv
 
 # graphs
 graphs/*.png
+
+# bundled dist
+dist/*.js
